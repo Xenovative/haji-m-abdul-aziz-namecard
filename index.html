@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260712a" />
+  <link rel="stylesheet" href="styles.css?v=20260712b" />
 </head>
 <body>
   <div class="page-shell">
@@ -70,7 +70,11 @@
       const focusEl = document.querySelector('.focus-en');
       const focusStyle = focusEl ? getComputedStyle(focusEl) : null;
       const rootBg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
-      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-html',message:'Abdul HTML namecard styles',data:{rootBg,bodyBg,focusFontSize:focusStyle?.fontSize,focusLineHeight:focusStyle?.lineHeight,hasImageHotspots:!!document.querySelector('.hotspot'),hasGreenTheme:document.querySelector('meta[name=theme-color]')?.content},timestamp:Date.now(),runId:'abdul-html-v1',hypothesisId:'H1-H3'})}).catch(()=>{});
+      const profileImg = document.querySelector('.profile-photo');
+      const wrap = document.querySelector('.profile-photo-wrap');
+      const wrapStyle = wrap ? getComputedStyle(wrap) : null;
+      const imgStyle = profileImg ? getComputedStyle(profileImg) : null;
+      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-profile',message:'Profile circle crop verification',data:{rootBg,bodyBg,focusFontSize:focusStyle?.fontSize,wrapBackground:wrapStyle?.backgroundColor,wrapBorder:wrapStyle?.border,objectPosition:imgStyle?.objectPosition,profileNatural:{w:profileImg?.naturalWidth,h:profileImg?.naturalHeight},hasImageHotspots:!!document.querySelector('.hotspot')},timestamp:Date.now(),runId:'abdul-profile-v2',hypothesisId:'H4-H6'})}).catch(()=>{});
     });
     // #endregion
   </script>
