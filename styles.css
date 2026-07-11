@@ -15,7 +15,7 @@
   --profile-size: 310px;
   --gallery-inset: 28px;
 
-  --fs-body: 28px;
+  --fs-body: 30px;
   --fs-name: 62px;
   --lh-body: 1.55;
   --lh-title: 1.45;
@@ -30,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
 }
 
 body {
@@ -39,30 +40,6 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 32px 32px;
-  opacity: 0.35;
-  z-index: 0;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 15% 0%, rgba(234, 204, 126, 0.08), transparent 28%),
-    radial-gradient(circle at 85% 10%, rgba(234, 204, 126, 0.05), transparent 24%);
-  z-index: 0;
 }
 
 img {
@@ -87,9 +64,7 @@ img {
   min-width: 0;
   border: 1px solid var(--card-border);
   border-radius: var(--card-radius);
-  background:
-    radial-gradient(circle at 88% 18%, rgba(234, 204, 126, 0.12), transparent 34%),
-    linear-gradient(180deg, rgba(18, 18, 18, 0.96) 0%, rgba(8, 8, 8, 0.98) 100%);
+  background: #0a0a0a;
   box-shadow: var(--shadow);
 }
 
@@ -291,7 +266,7 @@ img {
     --card-gap: clamp(18px, 2.7vw, 32px);
     --profile-size: clamp(180px, 26vw, 310px);
     --gallery-inset: clamp(12px, 2.4vw, 28px);
-    --fs-body: clamp(17px, 2.4vw, 28px);
+    --fs-body: clamp(18px, 2.6vw, 30px);
     --fs-name: clamp(24px, 4.2vw, 48px);
     --focus-gap: clamp(22px, 3vw, 36px);
     --contact-gap: clamp(14px, 2vw, 20px);
@@ -308,7 +283,7 @@ img {
     --card-gap: 14px;
     --profile-size: min(200px, 52vw);
     --gallery-inset: 12px;
-    --fs-body: 15px;
+    --fs-body: 17px;
     --fs-name: 22px;
     --focus-gap: 20px;
     --contact-gap: 14px;
@@ -349,7 +324,7 @@ img {
     --card-gap: 32px;
     --profile-size: 310px;
     --gallery-inset: 28px;
-    --fs-body: 28px;
+    --fs-body: 30px;
     --fs-name: 48px;
     --focus-gap: 36px;
     --contact-gap: 20px;
