@@ -45,19 +45,20 @@
     }
     .focus-overlay {
       position: absolute;
-      top: 33.6%;
+      top: 33.4%;
       left: 6.8%;
       width: 86.4%;
-      height: 19.2%;
+      height: 21%;
       z-index: 5;
-      padding: 0 4.5% 2%;
-      background: var(--panel);
+      padding: 2.8% 4.5% 2.2%;
+      background: #121212;
       border-radius: 16px;
       line-height: 1.65;
       pointer-events: none;
+      overflow: hidden;
     }
     .focus-overlay .section-title {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--gold-light);
@@ -66,8 +67,8 @@
       text-decoration-color: var(--gold-muted);
     }
     .focus-overlay p {
-      margin: 0 0 10px;
-      font-size: 0.95rem;
+      margin: 0 0 9px;
+      font-size: 15px;
       color: var(--text-soft);
     }
     .focus-overlay p:last-child {
@@ -130,11 +131,11 @@
   <main>
     <section class="card" aria-label="Digital name card">
       <picture>
-        <source srcset="namecard.webp?v=20260711h" type="image/webp" />
-        <img src="namecard.jpg?v=20260711h" alt="Dato’ Haji Mohd Abdul Aziz Bin Mohamed digital name card" loading="eager" />
+        <source srcset="namecard.webp" type="image/webp" />
+        <img src="namecard.jpg" alt="Dato’ Haji Mohd Abdul Aziz Bin Mohamed digital name card" loading="eager" />
       </picture>
 
-      <div class="focus-overlay" aria-hidden="true">
+      <div class="focus-overlay">
         <h2 class="section-title">Busines Focus :</h2>
         <p>Chairman Group / Group Pengerusi PERSATUAN UKHUWAAH HARTANAH DAN PELABURAN ISLAM MALAYSIA (PUSPAHM) and HARTANAH &amp; DAN PELABURAN ISLAM (PUSPATI) which now has more than 3,000 active members all over Malaysia.</p>
         <p>He is a successful businessman and an investor in various industries in Malaysia and a few countries abroad.</p>
@@ -169,7 +170,7 @@
         top: el.offsetTop,
         h: el.offsetHeight,
       }));
-      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-aziz',message:'Abdul Aziz layout check',data:{overlayFont:getComputedStyle(overlay?.querySelector('p')).fontSize,hotspotCount:hotspots.length,hotspots,hasAddress:!!document.querySelector('.hs-address')},timestamp:Date.now(),runId:'abdul-fix',hypothesisId:'H1'})}).catch(()=>{});
+      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-aziz',message:'Abdul Aziz layout check',data:{overlayFont:getComputedStyle(overlay?.querySelector('p')).fontSize,overlayRect:{top:overlay?.offsetTop,h:overlay?.offsetHeight},hotspotCount:hotspots.length,hotspots,hasAddress:!!document.querySelector('.hs-address')},timestamp:Date.now(),runId:'abdul-fix-v2',hypothesisId:'H3'})}).catch(()=>{});
     });
     // #endregion
   </script>
