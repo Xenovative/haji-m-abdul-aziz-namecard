@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Digital name card for Dato' Haji Mohd Abdul Aziz Bin Mohamed" />
   <meta name="theme-color" content="#000000" />
-  <title>Dato' Haji Mohd Abdul Aziz Bin Mohamed — Digital Name Card</title>
+  <title>Dato' Haji Mohd Abdul Aziz Bin Mohamed ??Digital Name Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260712b" />
+  <link rel="stylesheet" href="styles.css?v=20260712c" />
 </head>
 <body>
   <div class="page-shell">
@@ -74,7 +74,9 @@
       const wrap = document.querySelector('.profile-photo-wrap');
       const wrapStyle = wrap ? getComputedStyle(wrap) : null;
       const imgStyle = profileImg ? getComputedStyle(profileImg) : null;
-      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-profile',message:'Profile circle crop verification',data:{rootBg,bodyBg,focusFontSize:focusStyle?.fontSize,wrapBackground:wrapStyle?.backgroundColor,wrapBorder:wrapStyle?.border,objectPosition:imgStyle?.objectPosition,profileNatural:{w:profileImg?.naturalWidth,h:profileImg?.naturalHeight},hasImageHotspots:!!document.querySelector('.hotspot')},timestamp:Date.now(),runId:'abdul-profile-v2',hypothesisId:'H4-H6'})}).catch(()=>{});
+      const cardEl = document.querySelector('.nfc-card');
+      const cardBg = cardEl ? getComputedStyle(cardEl).backgroundColor : null;
+      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-style-fix',message:'Black bg + larger text verification',data:{rootBg,bodyBg,cardBg,focusFontSize:focusStyle?.fontSize,sectionFontSize:getComputedStyle(document.querySelector('.section-title')).fontSize,viewportWidth:window.innerWidth,cssVersion:'20260712c'},timestamp:Date.now(),runId:'post-fix',hypothesisId:'H1-H4'})}).catch(()=>{});
     });
     // #endregion
   </script>
