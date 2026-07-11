@@ -10,13 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css?v=20260711f" />
+  <link rel="stylesheet" href="styles.css?v=20260712a" />
 </head>
 <body>
   <div class="page-shell">
     <section class="nfc-card profile-card">
       <div class="profile-photo-wrap">
-        <img class="profile-photo" src="assets/profile.jpg" alt="Dato’ Haji Mohd Abdul Aziz Bin Mohamed profile photo" />
+        <img class="profile-photo" src="assets/profile.jpg?v=20260712a" alt="Dato’ Haji Mohd Abdul Aziz Bin Mohamed profile photo" />
       </div>
       <div class="profile-name-row">
         <div class="profile-name-block">
@@ -46,8 +46,8 @@
 
     <div class="gallery-grid">
       <section class="nfc-card gallery-card">
-        <figure class="gallery-figure gallery-figure-portrait">
-          <img src="assets/gallery-1.jpg" alt="Professional engagement highlight 1" />
+        <figure class="gallery-figure">
+          <img src="assets/gallery-1.jpg?v=20260712a" alt="Professional engagement highlight 1" />
         </figure>
       </section>
 
@@ -90,11 +90,10 @@
     // #region agent log
     window.addEventListener('load', () => {
       const photo = document.querySelector('.profile-photo');
-      const wrap = document.querySelector('.profile-photo-wrap');
-      const g1 = document.querySelector('.gallery-figure-portrait img');
+      const g1 = document.querySelector('.gallery-card:first-child img');
       const photoStyle = photo ? getComputedStyle(photo) : null;
       const g1Style = g1 ? getComputedStyle(g1) : null;
-      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-profile-v2',message:'Profile and gallery fit metrics',data:{photoObjectPosition:photoStyle?.objectPosition,photoTransform:photoStyle?.transform,photoHasBorder:getComputedStyle(wrap).borderWidth,wrapSize:[wrap?.offsetWidth,wrap?.offsetHeight],g1ObjectFit:g1Style?.objectFit,g1Natural:[g1?.naturalWidth,g1?.naturalHeight],g1Display:[g1?.offsetWidth,g1?.offsetHeight]},timestamp:Date.now(),runId:'abdul-profile-v2',hypothesisId:'H1-H3'})}).catch(()=>{});
+      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-profile-v2',message:'Profile and gallery fit metrics',data:{naturalW:photo?.naturalWidth,naturalH:photo?.naturalHeight,objectPosition:photoStyle?.objectPosition,transform:photoStyle?.transform,g1ObjectFit:g1Style?.objectFit,g1NaturalW:g1?.naturalWidth,g1NaturalH:g1?.naturalHeight,wrapW:document.querySelector('.profile-photo-wrap')?.offsetWidth},timestamp:Date.now(),runId:'abdul-profile-v2',hypothesisId:'H1-H5'})}).catch(()=>{});
     });
     // #endregion
   </script>
