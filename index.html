@@ -1,84 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Digital name card for Dato' Haji Mohd Abdul Aziz Bin Mohamed" />
-  <meta name="theme-color" content="#000000" />
-  <title>Dato' Haji Mohd Abdul Aziz Bin Mohamed ??Digital Name Card</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260712c" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dato' Haji Mohd Abdul Aziz Bin Mohamed — Public Servant & Islamic Affairs Professional.">
+  <meta name="theme-color" content="#000000">
+  <title>Dato' Haji Mohd Abdul Aziz Bin Mohamed | Digital Name Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260712">
+  <link rel="icon" href="assets/profile.jpg" type="image/jpeg">
 </head>
 <body>
-  <div class="page-shell">
-    <section class="nfc-card profile-card">
-      <div class="profile-photo-wrap">
-        <img class="profile-photo" src="assets/profile.jpg" alt="Dato' Haji Mohd Abdul Aziz Bin Mohamed profile photo" />
+  <main class="card">
+    <header class="hero">
+      <div class="profile-wrap">
+        <img src="assets/profile.jpg" alt="Dato' Haji Mohd Abdul Aziz Bin Mohamed" class="profile-photo" width="280" height="280">
       </div>
-      <div class="profile-name-row">
-        <div class="profile-name-block">
-          <h1 class="profile-name">Dato' Haji Mohd Abdul Aziz Bin Mohamed</h1>
-        </div>
-      </div>
-      <a class="btn-save" href="contact.vcf" download="Dato-Haji-Mohd-Abdul-Aziz-Bin-Mohamed.vcf">SAVE CONTACT</a>
-    </section>
+      <h1 class="profile-name">Dato' Haji Mohd Abdul Aziz Bin Mohamed</h1>
+      <a href="contact.vcf" class="btn-save" download="Dato-Haji-Mohd-Abdul-Aziz-Bin-Mohamed.vcf">SAVE CONTACT</a>
+    </header>
 
-    <section class="nfc-card business-focus-card">
+    <section class="panel">
       <h2 class="section-title">Busines Focus :</h2>
       <div class="focus-list">
         <div class="focus-item">
-          <p class="focus-en">Haji Mohd Abdul Aziz Mohamed is a distinguished Malaysian public servant and Islamic affairs professional with extensive experience in governance, policy administration, and institutional advisory. A graduate of Al-Azhar University, Cairo, holding a degree in Sharia and Law with specialisation in Islamic Economics, he has dedicated his career to strengthening public institutions and advancing ethical governance.</p>
+          <p>Haji Mohd Abdul Aziz Mohamed is a distinguished Malaysian public servant and Islamic affairs professional with extensive experience in governance, policy administration, and institutional advisory. A graduate of Al-Azhar University, Cairo, holding a degree in Sharia and Law with specialisation in Islamic Economics, he has dedicated his career to strengthening public institutions and advancing ethical governance.</p>
         </div>
         <div class="focus-item">
-          <p class="focus-en">He has served in the Prime Minister's Department (Islamic Affairs), contributing to the administration and development of Islamic affairs at the federal level. Beyond public service, he actively advises several prominent organisations, including as Advisor to the Federal Territory Military Veterans Association, Sharia Advisor to the Malaysian Road Users Association, and Vice President of the Overseas University Alumni Association.</p>
+          <p>He has served in the Prime Minister's Department (Islamic Affairs), contributing to the administration and development of Islamic affairs at the federal level. Beyond public service, he actively advises several prominent organisations, including as Advisor to the Federal Territory Military Veterans Association, Sharia Advisor to the Malaysian Road Users Association, and Vice President of the Overseas University Alumni Association.</p>
         </div>
         <div class="focus-item">
-          <p class="focus-en">Recognised for his integrity, professionalism, and commitment to public service, Haji Mohd Abdul Aziz continues to contribute to Malaysia's institutional development through leadership, governance, and community engagement.</p>
+          <p>Recognised for his integrity, professionalism, and commitment to public service, Haji Mohd Abdul Aziz continues to contribute to Malaysia's institutional development through leadership, governance, and community engagement.</p>
         </div>
       </div>
     </section>
 
-    <div class="gallery-grid">
-      <section class="nfc-card gallery-card">
-        <figure class="gallery-figure">
-          <img src="assets/gallery-1.jpg" alt="Client engagement highlight 1" />
-        </figure>
-      </section>
-      <section class="nfc-card gallery-card">
-        <figure class="gallery-figure">
-          <img src="assets/gallery-2.jpg" alt="Client engagement highlight 2" />
-        </figure>
-      </section>
-    </div>
+    <section class="gallery" aria-label="Photo gallery">
+      <figure class="gallery-item">
+        <img src="assets/gallery-1.jpg" alt="Client engagement highlight" loading="lazy" width="982" height="929">
+      </figure>
+      <figure class="gallery-item">
+        <img src="assets/gallery-2.jpg" alt="Meeting and collaboration highlight" loading="lazy" width="987" height="560">
+      </figure>
+    </section>
 
-    <section class="nfc-card contact-card" id="contact">
+    <section class="panel contact-panel">
       <h2 class="section-title">Contact Details :</h2>
-      <div class="contact-list">
-        <p>MY : <a href="tel:+60139765870">+60 013-976 5870</a></p>
-        <p>Whatsapp : <a href="https://wa.me/60139765870" target="_blank" rel="noopener noreferrer">+60 013-976 5870</a></p>
-        <p>Email : <a href="mailto:mdaziz@cafcapital.com.my">mdaziz@cafcapital.com.my</a></p>
-      </div>
+      <address class="contact-list">
+        <p><span class="label">MY</span> : <a href="tel:+60139765870">+60 013-976 5870</a></p>
+        <p><span class="label">Whatsapp</span> : <a href="https://wa.me/60139765870" target="_blank" rel="noopener noreferrer">+60 013-976 5870</a></p>
+        <p><span class="label">Email</span> : <a href="mailto:mdaziz@cafcapital.com.my">mdaziz@cafcapital.com.my</a></p>
+      </address>
     </section>
-  </div>
-
-  <script>
-    // #region agent log
-    window.addEventListener('load', () => {
-      const bodyBg = getComputedStyle(document.body).backgroundColor;
-      const focusEl = document.querySelector('.focus-en');
-      const focusStyle = focusEl ? getComputedStyle(focusEl) : null;
-      const rootBg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
-      const profileImg = document.querySelector('.profile-photo');
-      const wrap = document.querySelector('.profile-photo-wrap');
-      const wrapStyle = wrap ? getComputedStyle(wrap) : null;
-      const imgStyle = profileImg ? getComputedStyle(profileImg) : null;
-      const cardEl = document.querySelector('.nfc-card');
-      const cardBg = cardEl ? getComputedStyle(cardEl).backgroundColor : null;
-      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-style-fix',message:'Black bg + larger text verification',data:{rootBg,bodyBg,cardBg,focusFontSize:focusStyle?.fontSize,sectionFontSize:getComputedStyle(document.querySelector('.section-title')).fontSize,viewportWidth:window.innerWidth,cssVersion:'20260712c'},timestamp:Date.now(),runId:'post-fix',hypothesisId:'H1-H4'})}).catch(()=>{});
-    });
-    // #endregion
-  </script>
+  </main>
 </body>
 </html>
