@@ -6,53 +6,126 @@
   <meta name="description" content="Digital name card for Dato’ Haji Mohd Abdul Aziz Bin Mohamed" />
   <meta name="theme-color" content="#0A2E1D" />
   <title>Dato’ Haji Mohd Abdul Aziz Bin Mohamed — Digital Name Card</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260711i" />
-  <link rel="icon" href="assets/profile.jpg" type="image/jpeg" />
+  <style>
+    :root {
+      --bg: #0A2E1D;
+      --accent-hover: rgba(255, 255, 255, 0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0;
+    }
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 588px;
+      background: var(--bg);
+      line-height: 0;
+    }
+    .card picture, .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .hotspot {
+      position: absolute;
+      display: block;
+      z-index: 10;
+      background: transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-decoration: none;
+    }
+    .hotspot:hover, .hotspot:focus {
+      background: var(--accent-hover);
+      outline: none;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hs-save-top {
+      top: 18.0%;
+      left: 37.2%;
+      width: 25.5%;
+      height: 1.5%;
+    }
+
+    .hs-phone {
+      top: 89.6%;
+      left: 6.8%;
+      width: 86.4%;
+      height: 1.1%;
+    }
+    .hs-whatsapp {
+      top: 90.8%;
+      left: 6.8%;
+      width: 86.4%;
+      height: 1.1%;
+    }
+    .hs-email {
+      top: 92.0%;
+      left: 6.8%;
+      width: 86.4%;
+      height: 1.1%;
+    }
+  </style>
 </head>
 <body>
-  <main class="card">
-    <header class="hero">
-      <div class="profile-wrap">
-        <img src="assets/profile.jpg" alt="Dato’ Haji Mohd Abdul Aziz Bin Mohamed" class="profile-photo" width="280" height="280" />
-      </div>
-      <h1 class="name">Dato’ Haji Mohd Abdul Aziz Bin Mohamed</h1>
-      <a href="contact.vcf" class="btn-save" download="Dato-Haji-Mohd-Abdul-Aziz-Bin-Mohamed.vcf">SAVE CONTACT</a>
-    </header>
+  <main>
+    <section class="card" aria-label="Digital name card">
+      <picture>
+        <source srcset="namecard.webp" type="image/webp" />
+        <img src="namecard.jpg" alt="Dato’ Haji Mohd Abdul Aziz Bin Mohamed digital name card" loading="eager" />
+      </picture>
 
-    <section class="panel">
-      <h2 class="section-title">Busines Focus :</h2>
-      <p>Chairman Group / Group Pengerusi PERSATUAN UKHUWAAH HARTANAH DAN PELABURAN ISLAM MALAYSIA (PUSPAHM) and HARTANAH &amp; DAN PELABURAN ISLAM (PUSPATI) which now has more than 3,000 active members all over Malaysia.</p>
-      <p>He is a successful businessman and an investor in various industries in Malaysia and a few countries abroad.</p>
-      <p>He has established a few companies such as Capital Asset Facilities Sdn. Bhd. and CAF Capital Asset Management Sdn. Bhd., and several other private companies and partnerships.</p>
-    </section>
+      <a class="hotspot hs-save-top" href="contact.vcf" download="Dato-Haji-Mohd-Abdul-Aziz-Bin-Mohamed.vcf" type="text/x-vcard">
+        <span class="sr-only">Save contact</span>
+      </a>
 
-    <section class="gallery" aria-label="Photo gallery">
-      <figure class="gallery-item">
-        <img src="assets/gallery-1.jpg" alt="Community engagement event" loading="lazy" width="1047" height="550" />
-      </figure>
-      <figure class="gallery-item">
-        <img src="assets/gallery-2.jpg" alt="Business meeting" loading="lazy" width="1047" height="761" />
-      </figure>
-    </section>
+      <a class="hotspot hs-phone" href="tel:+60139765870">
+        <span class="sr-only">Call +60 13-976 5870</span>
+      </a>
 
-    <section class="panel contact-panel">
-      <h2 class="section-title">Contact Details :</h2>
-      <address class="contact-list">
-        <p><span class="label">MY :</span> <a href="tel:+60139765870">+60 013-976 5870</a></p>
-        <p><span class="label">Whatsapp :</span> <a href="https://wa.me/60139765870" target="_blank" rel="noopener noreferrer">+60 013-976 5870</a></p>
-        <p><span class="label">Email :</span> <a href="mailto:mdaziz@cafcapital.com.my">mdaziz@cafcapital.com.my</a></p>
-      </address>
+      <a class="hotspot hs-whatsapp" href="https://wa.me/60139765870" target="_blank" rel="noopener noreferrer">
+        <span class="sr-only">WhatsApp +60 13-976 5870</span>
+      </a>
+
+      <a class="hotspot hs-email" href="mailto:mdaziz@cafcapital.com.my">
+        <span class="sr-only">Email mdaziz@cafcapital.com.my</span>
+      </a>
     </section>
   </main>
   <script>
     // #region agent log
     window.addEventListener('load', () => {
-      const panel = document.querySelector('.panel');
-      const p = panel?.querySelector('p');
-      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-html',message:'HTML namecard layout',data:{bodyFont:getComputedStyle(document.body).fontSize,paraFont:p?getComputedStyle(p).fontSize:null,hasOverlay:!!document.querySelector('.focus-overlay'),hasHotspots:document.querySelectorAll('.hotspot').length,panelScrollH:panel?.scrollHeight,panelClientH:panel?.clientHeight,overflow:panel?getComputedStyle(panel).overflow:null},timestamp:Date.now(),runId:'abdul-html-v1',hypothesisId:'H4'})}).catch(()=>{});
+      const card = document.querySelector('.card');
+      const img = document.querySelector('.card img');
+      const hs = [...document.querySelectorAll('.hotspot')].map((el) => ({
+        cls: el.className,
+        href: el.getAttribute('href'),
+        topPct: card ? ((el.getBoundingClientRect().top - card.getBoundingClientRect().top) / card.getBoundingClientRect().height * 100).toFixed(1) : null,
+      }));
+      fetch('http://127.0.0.1:7501/ingest/13cfea48-8ef8-4597-8481-d17014fbf4be',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'783f56'},body:JSON.stringify({sessionId:'783f56',location:'index.html:abdul-restore',message:'Restored image namecard',data:{imgLoaded:!!img?.naturalWidth,hotspots:hs,hasAddress:!!document.querySelector('.hs-address'),hasOverlay:!!document.querySelector('.focus-overlay')},timestamp:Date.now(),runId:'abdul-restore',hypothesisId:'H5'})}).catch(()=>{});
     });
     // #endregion
   </script>
