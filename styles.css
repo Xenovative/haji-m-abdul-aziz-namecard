@@ -153,8 +153,17 @@ body {
 .gallery-item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center center;
+}
+
+.gallery-item:first-child {
+  aspect-ratio: 982 / 929;
+}
+
+.gallery-item:last-child {
+  aspect-ratio: 986 / 494;
 }
 
 .contact-panel {
